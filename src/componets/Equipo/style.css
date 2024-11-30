@@ -1,0 +1,65 @@
+.equipo {
+    --color-primario: #d9f7e9;
+    --color-secundario: #57c278;
+
+    background-color: var(--color-primario);
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.equipo--front-end {
+    --color-primario: #e8f8ff;
+    --color-secundario: #82cffa;
+}
+
+.equipo--data-science {
+    --color-primario: #f0f8e2;
+    --color-secundario: #a6d157;
+}
+
+.equipo--devops {
+    --color-primario: #fde7e8;
+    --color-secundario: #e06b69;
+}
+
+.equipo--ux-y-diseño {
+    --color-primario: #fae9f5;
+    --color-secundario: #db6ebf;
+}
+
+.equipo--móvil {
+    --color-primario: #fff5d9;
+    --color-secundario: #ffba05;
+}
+
+.equipo--innovación-y-gestión {
+    --color-primario: #ffeedf;
+    --color-secundario: #ff8a29;
+}
+
+.equipo__titulo {
+    /* block-size: 87px; */
+    block-size: fit-content;
+    padding-block: 10px;
+    margin-block-start: 34px;
+
+    display: flex;
+    align-items: center;
+
+    border-bottom: 4px solid var(--color-secundario);
+    color: #212121;
+    font-size: 3.2rem;
+    font-family: "Prata", sans-serif;
+    font-weight: 400;
+}
+
+.equipo__cards {
+    max-inline-size: 1121px;
+    padding-block: 39px;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 24px;
+}

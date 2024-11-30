@@ -1,0 +1,23 @@
+.footer {
+    background-color: #6278f7;
+
+    block-size: 213px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.footer__img {
+    grid-column: 2 / span 1;
+    justify-self: center;
+    align-self: center;
+}
+
+.footer__parrafo {
+    grid-column: 3 / span 1;
+    justify-self: center;
+    align-self: center;
+
+    font-family: "Montserrat", sans-serif;
+    font-size: 2rem;
+    color: #fff;
+}

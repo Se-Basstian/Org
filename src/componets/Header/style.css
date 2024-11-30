@@ -1,0 +1,38 @@
+.header {
+    background-color: #6278f7;
+    inline-size: 100%;
+    block-size: 556px;
+
+    display: flex;
+    justify-content: center;
+
+    background-image: url("/fondoHeader.png");
+    background-repeat: no-repeat;
+    background-size: 517px 457px;
+    background-position: right bottom;
+}
+
+.header > div {
+    inline-size: 1121px;
+    block-size: 100%;
+
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: column;
+}
+
+.header__img {
+    inline-size: 190px;
+    block-size: 72px;
+}
+
+.header__titulo {
+    font-size: 7.2rem;
+    font-family: "Prata", serif;
+    font-weight: 400;
+}
+
+.header__parrafo {
+    font-size: 3.6rem;
+    font-family: "Montserrat", sans-serif;
+}

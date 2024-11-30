@@ -1,0 +1,41 @@
+.mi-org {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    margin-block: 75px;
+}
+
+.mi-org__titulo {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 1;
+    align-self: center;
+    justify-self: center;
+
+    inline-size: fit-content;
+    block-size: 100%;
+    /* padding-block-end: 20px; */
+
+    border-bottom: 4px solid #6278f7;
+
+    font-family: "Prata", sans-serif;
+    font-size: 4rem;
+    color: #6278f7;
+    display: flex;
+    align-items: center;
+}
+
+.mi-org__img {
+    grid-column: 3 / -1;
+    grid-row: 1 / span 1;
+    justify-self: end;
+    align-self: center;
+    transition: transform 0.15s linear;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+
+    &:active {
+        transform: scale(1);
+    }
+}

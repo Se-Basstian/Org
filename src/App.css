@@ -1,0 +1,10 @@
+.app__mensaje {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-size: 3.2rem;
+    color: rgb(0, 0, 0, 20%);
+
+    inline-size: fit-content;
+    margin-inline: auto;
+    margin-block-end: 40px;
+}
