@@ -43,7 +43,7 @@
     background-color: #ff8a29;
 }
 
-.colaborador__img {
+.colaborador__img-perfil {
     inline-size: 120px;
     aspect-ratio: 1 / 1;
     position: relative;
@@ -51,6 +51,21 @@
     left: calc(50% - 60px);
 
     border-radius: 60px;
+}
+
+.colaborador__img-cerrar {
+    position: relative;
+    bottom: 82px;
+    left: 105px;
+    transition: transform 0.22s linear;
+
+    &:hover {
+        transform: scale(1.2);
+    }
+
+    &:active {
+        transform: none;
+    }
 }
 
 .colaborador__main {
