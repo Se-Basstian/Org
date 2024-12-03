@@ -1,35 +1,40 @@
 import "./style.css";
 import perfil from "../../assets/imgs/perfil.webp";
-import imgCerrar from "../../assets/imgs/cerrar.png";
+// import imgCerrar from "../../assets/imgs/cerrar.png";
+import { IoIosCloseCircle } from "react-icons/io";
 
 type Imagen = { src: string; alt: string };
 
 interface Props {
+  idColaborador: string;
   imagen: Imagen;
   nombre: string;
   descripcion: string;
-  eliminar: () => void;
+  eliminar: (id: string) => void;
 }
 
-function Colaborador({ imagen, nombre, descripcion, eliminar }: Props) {
+export default function Colaborador({
+  idColaborador,
+  imagen,
+  nombre,
+  descripcion,
+  eliminar,
+}: Props) {
   const colorNumero = Math.floor(Math.random() * 7) + 1;
 
   const foto = imagen.src || perfil;
-  const evtEliminar = () => {
-    eliminar();
-  };
 
   return (
-    <div className="colaborador">
+    <div id={idColaborador} className="colaborador">
       <div
         className={`colaborador__header colaborador__header--color-${colorNumero}`}
       >
         <img className="colaborador__img-perfil" src={foto} alt={imagen.alt} />
-        <img
-          onClick={evtEliminar}
+        <IoIosCloseCircle
           className="colaborador__img-cerrar"
-          src={imgCerrar}
-          alt="Una equis para eliminar al colaborardor"
+          onClick={() => {
+            eliminar(idColaborador);
+          }}
         />
       </div>
       <div className="colaborador__main">
@@ -39,5 +44,3 @@ function Colaborador({ imagen, nombre, descripcion, eliminar }: Props) {
     </div>
   );
 }
-
-export default Colaborador;

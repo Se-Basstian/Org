@@ -2,9 +2,11 @@ import type { FormEvent } from "react";
 import { useState } from "react";
 import CampoTexto from "../CampoTexto";
 import ListaOpciones from "../ListaOpciones";
+import { v4 as uuidv4 } from "uuid";
 import "./style.css";
 
 interface formDatos {
+  identificador: string;
   nombre: string;
   puesto: string;
   foto: string;
@@ -27,6 +29,7 @@ function Formulario({ listaOpc, registarColaborador }: Props) {
     console.log("Dato enviado");
 
     const datosEnviado: formDatos = {
+      identificador: uuidv4(),
       nombre: valorNombre,
       puesto: valorPuesto,
       foto: valorFoto,

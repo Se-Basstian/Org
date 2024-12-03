@@ -54,6 +54,9 @@
 }
 
 .colaborador__img-cerrar {
+    inline-size: 32px;
+    block-size: 32px;
+    color: white;
     position: relative;
     bottom: 82px;
     left: 105px;
@@ -65,6 +68,7 @@
 
     &:active {
         transform: none;
+        color: red;
     }
 }
 

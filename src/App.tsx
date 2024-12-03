@@ -8,9 +8,8 @@ import Colaborador from "./componets/Colaborador";
 import Footer from "./componets/Footer";
 import { v4 as uuidv4 } from "uuid";
 
-// import perfil from "./assets/imgs/perfil.webp";
-
 interface formDatos {
+  identificador: string;
   nombre: string;
   puesto: string;
   foto: string;
@@ -23,6 +22,11 @@ function App() {
 
   const ocultarForm = () => {
     setMostrarFor(!mostrarForm);
+  };
+
+  const eliminarColaborador = (id: string) => {
+    setColaboradores(colaboradores.filter((cld) => cld.identificador !== id));
+    console.log("El colaborador fue eliminado con éxito");
   };
 
   const equipos = [
@@ -48,10 +52,11 @@ function App() {
         return (
           <Colaborador
             key={uuidv4()}
+            idColaborador={colaborador.identificador}
             imagen={{ src: colaborador.foto, alt: "foto perfil" }}
             nombre={colaborador.nombre}
             descripcion={colaborador.puesto}
-            eliminar={() => console.log("Hola munde")}
+            eliminar={eliminarColaborador}
           />
         );
       });
@@ -69,7 +74,7 @@ function App() {
     return equipos.map((equipo) => {
       return (
         colaboradores.some((colaborador) => colaborador.equipo === equipo) && (
-          <Equipo key={`equipo-${++i}`} titulo={equipo}>
+          <Equipo key={uuidv4()} titulo={equipo}>
             {creaColaborador(colaboradores, equipo)}
           </Equipo>
         )

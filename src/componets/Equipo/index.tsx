@@ -7,10 +7,10 @@ interface Props {
 }
 
 function Equipo({ titulo, children }: Props) {
+  const colorFondo = titulo.toLowerCase().replace(/ /gi, "-");
+
   return (
-    <section
-      className={`equipo equipo--${titulo.toLowerCase().replace(/ /gi, "-")}`}
-    >
+    <section className={`equipo --${colorFondo}`}>
       <h3 className="equipo__titulo">{titulo}</h3>
       <div className="equipo__cards">{children}</div>
     </section>
